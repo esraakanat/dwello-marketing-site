@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Test</title>
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+
+  </head>
+  <body>
+<header class="bg-[#FEF7F2] relative">
+    <nav aria-label="Global" class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+      <div class="flex md:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Your Company</span>
+          <img src="assets/images/logo.svg" alt="logo" class="h-7 w-auto" />
+        </a>
+      </div>
+      <div class="flex md:hidden">
+        <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <span class="sr-only">Open main menu</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <el-popover-group class="hidden md:flex md:gap-x-12">
+        <div class="relative">
+            <a href="#" class="text-sm/6 font-semibold text-gray-900">Products</a>
+  
+          <el-popover id="desktop-menu-product" anchor="bottom" popover class="w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg outline-1 outline-gray-900/5 transition transition-discrete [--anchor-gap:--spacing(3)] backdrop:bg-transparent open:block data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in">
+            <div class="p-4">
+              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
+                <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-gray-600 group-hover:text-indigo-600">
+                    <path d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
+                <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-gray-600 group-hover:text-indigo-600">
+                    <path d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+
+              </div>
+              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
+                <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-gray-600 group-hover:text-indigo-600">
+                    <path d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+               
+              </div>
+              
+              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-gray-50">
+                <div class="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6 text-gray-600 group-hover:text-indigo-600">
+                    <path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+           
+          </el-popover>
+        </div>
+  
+        <a href="#" class="text-sm/6 font-semibold text-gray-900">Features</a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900">Marketplace</a>
+        <a href="#" class="text-sm/6 font-semibold text-gray-900">Company</a>
+      </el-popover-group>
+      <div class="hidden md:flex md:flex-1 md:justify-end gap-6">
+        <img src="assets/images/search.svg" alt="search.svg" class="h-5 w-auto mt-2" />
+        <img src="assets/images/user.svg" alt="user.svg" class="h-5 w-auto mt-2" />
+        <button class="text-sm/6 font-semibold bg-[#2B1B12] text-[#FFFFFF] px-5 py-2 rounded-md ">Sign up</button>
+      </div>
+    </nav>
+    <el-dialog>
+      <dialog id="mobile-menu" class="backdrop:bg-transparent md:hidden">
+        <div tabindex="0" class="fixed inset-0 focus:outline-none">
+          <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Your Company</span>
+                <img src="assets/images/logo.svg" alt="" class="h-6 w-auto" />
+              </a>
+              <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Close menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <div class="-mx-3">
+                    <a href="#" class="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Products</a>
+                 
+                  </div>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Marketplace</a>
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a>
+                </div>
+                <div class="py-6">
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Sign up</a>
+                </div>
+              </div>
+            </div>
+          </el-dialog-panel>
+        </div>
+      </dialog>
+    </el-dialog>
+<div class="container mx-auto max-w-7xl px-6 -mt-24 ">
+    <div class="md:flex md:justify-between ">
+        <div class="w-[85%] md:w-[40%] ">
+            <h1 class="font-[Montserrat] font-extrabold text-5xl lg:text-5xl xl:text-6xl text-[#2B1B12] tracking-wide  leading-16 mt-36">Find Your Dream Home</h1>
+            <p class=" font-[Montserrat] font-semibold md:font-bold text-base md:text-sm lg:text-base xl:text-lg text-[#4F3527] leading-7 mt-8">Explore our curated selection of exquisite properties meticulously tailored to your unique dream home vision</p>
+            <button class="text-sm/6 font-semibold bg-[#2B1B12] text-[#FFFFFF] px-10 py-2 rounded-md mt-12 lg:mt-16">Sign up</button>
+           </div>
+           <div class=" w-[90%] md:w-[60%]">
+            <img src="assets/images/hero-image.png" alt="hero-image" class=" -mt-4 sm:-mt-8 md:mt-6 lg:mt-2 xl:mt-1 lg:h-[600px] lg:w-[600px] xl:h-[700px] xl:w-[700px]" />
+           </div>
+        </div>
+        
+        <div class="absolute grid grid-cols-2 md:grid-cols-4  gap-2 lg:gap-4 xl:gap-6 left-1/2 bottom-[-5em] md:bottom-[-2rem] lg:bottom-[-3rem] -translate-x-1/2  md:max-w-4xl w-4/5 md:w-3/5  md:-ml-28 bg-[#DDC7BB] p-4 md:p-2 lg:p-4 xl:p-8 rounded-xl">
+            <div class="relative ">
+                <input 
+                  type="text" 
+                  placeholder="Location" 
+                  class="w-full rounded-md border-none  py-2 md:py-3 pl-4 pr-10 bg-[#FBF5F1] placeholder-[#695346]  font-normal xl:font-semibold focus:outline-none focus:ring-1 focus:ring-[#695346]"
+                />
+                <img src="assets/images/location.svg" alt="location" class="absolute right-3 top-1/2 size-5 -translate-y-1/2 text-[#695346]" >
+            </div>
+            <div class="relative ">
+                <input 
+                  type="text" 
+                  placeholder="Type" 
+                  class="w-full rounded-md border-none  py-2 md:py-3 md:py-3 pl-4 pr-10 bg-[#FBF5F1] placeholder-[#695346] lg:font-normal xl:font-semibold focus:outline-none focus:ring-1 focus:ring-[#695346]"
+                />
+                <img src="assets/images/home.svg" alt="location" class="absolute right-3 top-1/2 size-5 -translate-y-1/2 text-[#695346]" >
+            </div>
+            <div class="relative ">
+                <input 
+                  type="text" 
+                  placeholder="Price Range" 
+                  class="w-full rounded-md border-none py-2 md:py-3 pl-4 pr-10 bg-[#FBF5F1] placeholder-[#695346] lg:font-normal xl:font-semibold focus:outline-none focus:ring-1 focus:ring-[#695346]"
+                />
+                <img src="assets/images/price.svg" alt="location" class="absolute md:right-2 right-3 top-1/2 size-5 -translate-y-1/2 text-[#695346]" >
+            </div>   
+          <button class="text-sm/6 font-normal md:font-semibold bg-[#2B1B12] text-[#FFFFFF]  px-4 lg:px-6 xl:px-8 py-0.2 rounded-md  whitespace-nowrap ">Sign up</button>
+          </div>
+        </div>
+  </header>
+
+  <main>
+    <div class="container mx-auto max-w-7xl px-6 mt-32 ">
+    <div class="md:grid md:grid-cols-2  ">
+      <div>
+        <img src="assets/images/rich_home.png" alt="home-image" class="ml-6 sm:ml-12 md:ml-0 rounded-xl h-[280px] w-[380px] sm:h-[320px] sm:w-[520px] md:h-[300px] md:w-[350px] lg:h-[320px] lg:w-[380px] xl:h-[320px] xl:w-[400px]" />
+      </div>
+      <div>
+<h3 class="font-[Montserrat] font-bold md:font-extrabold text-2xl sm:text-4xl md:text-3xl xl:text-4xl text-[#2B1B12] w-[90%] sm:w-[80%] md:w-[90%] lg:w-[85%] xl:w-[100%] ml-12 sm:ml-16 md:ml-0 mt-8 md:mt-1">
+  We Help You To Find Your Dream Home</h3>
+<p class=" font-[Montserrat] font-semibold w-[80%] text-sm  text-[#4F3527] leading-7 mt-4 md:mt-8 ml-12 sm:ml-16 md:ml-0 ">
+  From cozy cottages to luxurious estates, our dedicated team guides you through every step of the journey, ensuring your dream home becomes a reality</p>
+<div class="grid grid-cols-3 ml-16 md:ml-0 mt-8 md:mt-6 lg:mt-8 xl:mt-12">
+<div class="grid">
+  <p class=" font-[Montserrat] font-semibold text-[#4F3527] md:text-2xl lg:text-3xl xl:text-4xl">8K+</p>
+  <p class=" font-[Montserrat] font-semibold text-[#4F3527] md:text-xs text-sm mt-2 ">Houses Available</p>
+</div>
+<div class="grid">
+  <p class=" font-[Montserrat] font-semibold text-[#4F3527]  md:text-2xl  lg:text-3xl xl:text-4xl">6K+</p>
+  <p class=" font-[Montserrat] font-semibold text-[#4F3527] md:text-xs text-sm mt-2">Houses Sold</p>
+</div>
+<div class="grid">
+  <p class=" font-[Montserrat] font-semibold text-[#4F3527]  md:text-2xl  lg:text-3xl xl:text-4xl">2K+</p>
+  <p class=" font-[Montserrat] font-semibold text-[#4F3527] md:text-xs lg:text-sm mt-2">Trusted Agents</p>
+</div>
+</div>     
+</div>
+    </div>
+  </div>
+
+  <div class="container mx-auto max-w-7xl px-6 mt-32 ">
+    <div class="text-center">
+      <h4 class="font-[Montserrat] font-bold text-3xl text-[#2B1B12]" >Why Choose Us</h4>
+      <p class="font-[Montserrat] font-semibold text-sm sm:text-base w-[90%] sm:w-[80%] md:w-[70%] lg:w-[50%] text-[#4F3527] ml-8 sm:ml-16 md:ml-32 lg:ml-72 mt-6 ">Elevating Your Home Buying Experience with Expertise, Integrity, and Unmatched Personalized Service</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+      <div class="relative bg-[#DDC7BB] rounded-2xl pt-12 pb-8 mx-auto">
+        <div>
+          <img src="assets/images/Group 3.svg" alt="location" class="absolute rounded-md bg-[#FBF5F1] py-2 px-2 xl:py-3 xl:px-3 left-6 top-7 " >
+        </div>
+        <p class="mt-20 ml-6 text-[#2B1B12] font-[Montserrat] font-semibold text-lg">Expert Guidance</p>
+        <p class="mt-2 ml-6 w-[80%] font-[Montserrat] font-medium text-base">Benefit from our team's seasoned expertise for a smooth buying experience</p>
+      </div>
+      <div class="relative bg-[#DDC7BB] rounded-2xl pt-12 pb-8 mx-auto">
+        <div>
+          <img src="assets/images/Group 4.svg" alt="location" class="absolute rounded-md bg-[#FBF5F1]  py-2 px-2 xl:py-3 xl:px-3 left-6 top-7 " >
+        </div>
+        <p class="mt-20 ml-6 text-[#2B1B12] font-[Montserrat] font-semibold text-lg">Personalized Service</p>
+        <p class="mt-2 ml-6 w-[80%] font-[Montserrat] font-medium  text-base">Our services adapt to your unique needs, making your journey stress-free</p>
+      </div>
+      <div class="relative bg-[#DDC7BB] rounded-2xl pt-12 pb-8 mx-auto ">
+        <div>
+          <img src="assets/images/Group (1).svg" alt="location" class="absolute rounded-md bg-[#FBF5F1]  py-2 px-2 xl:py-3 xl:px-3 left-6 top-7 " >
+        </div>
+        <p class="mt-20 ml-6 text-[#2B1B12] font-[Montserrat] font-semibold text-lg">Transparent Process</p>
+        <p class="mt-2 ml-6 w-[80%] font-[Montserrat] font-medium text-base">Stay informed with our clear and honest approach to buying your home</p>
+      </div>
+      <div class="relative bg-[#DDC7BB] rounded-2xl pt-12 pb-8 mx-auto">
+        <div>
+          <img src="assets/images/Group (2).svg" alt="location" class="absolute rounded-md bg-[#FBF5F1]  py-2 px-2 xl:py-3 xl:px-3 left-6 top-7 " >
+        </div>
+        <p class="mt-20 ml-6 text-[#2B1B12] font-[Montserrat] font-semibold text-lg">Exceptional Support</p>
+        <p class="mt-2 ml-6 w-[80%] font-[Montserrat] font-medium text-base">Providing peace of mind with our responsive and attentive customer service</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto max-w-7xl px-6 mt-32 ">
+    <p class="font-[Montserrat] font-extrabold text-2xl sm:text-3xl text-[#2B1B12] text-center "> Our Popular Residences</p>
+    <div class="grid md:grid-cols-3 mt-12 gap-4 sm:ml-8 md:ml-8">
+      <div class=" px-2">
+        <img src="assets/images/image 1.png" alt="home-image" class=" rounded-t-xl h-[300px] w-[400px] sm:w-[550px] md:h-[200px] md:w-[300px] lg:h-[300px] lg:w-[365px] "/>
+        <div class="bg-[#DDC7BB] pt-4 pl-6  w-[400px] sm:w-[550px] md:w-[100%] xl:w-[98%] rounded-b-xl">
+         <div class="flex items-center justify-start">
+          <img src="assets/images/location.svg" alt="location" class=" size-5  text-[#695346]" >
+            <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-semibold text-xl  md:text-sm lg:text-lg ml-2"> San Francisco, California</p>
+            </div>
+            <div class="flex justify-start gap-24 md:gap-4 lg:gap-16 mt-4">
+            <div class="flex">
+              <img src="assets/images/rooms.svg" alt="location" class=" size-5 bg-[#FFFFFF]  text-[#695346]" >
+                <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-medium text-base md:text-sm lg:text-base"> Rooms</p>
+                </div>
+                <div class="flex">
+                  <img src="assets/images/size.svg" alt="location" class=" size-5 bg-[#FFFFFF] text-[#695346]" >
+                    <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-medium text-sm lg:text-base">3,500 sq ft</p>
+                    </div>
+                  </div>
+                  <div class="flex md:justify-around gap-28 md:gap-2 md:-ml-8 mt-6 pb-4">
+                    <div >
+                      <button class="text-sm/6 font-normal md:font-semibold bg-[#2B1B12] text-[#FFFFFF]  px-5 py-2 rounded-md  whitespace-nowrap ">Sign up</button>
+                        </div>
+                        <div >
+                            <p class="pl-2 text-[#4F3527] font-[Montserrat] font-semibold text-base lg:text-lg">$2,500,000</p>
+                            </div>
+                          </div>
+                           </div> 
+                             </div>
+                             <div class=" px-2">
+                              <img src="assets/images/image 2.png" alt="home-image" class=" rounded-t-xl h-[300px] w-[400px] sm:w-[550px]  md:h-[200px] md:w-[300px] lg:h-[300px] lg:w-[365px] "/>
+                              <div class="bg-[#DDC7BB] pt-4 pl-6 w-[400px] sm:w-[550px] md:w-[100%] xl:w-[98%] rounded-b-xl">
+                               <div class="flex items-center justify-start">
+                                <img src="assets/images/location.svg" alt="location" class=" size-5  text-[#695346]" >
+                                  <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-semibold text-xl  md:text-sm lg:text-lg ml-2"> Beverly Hills, California</p>
+                                  </div>
+                                  <div class="flex justify-start gap-24 md:gap-4 lg:gap-16 mt-4">
+                                  <div class="flex">
+                                    <img src="assets/images/rooms.svg" alt="location" class=" size-5 bg-[#FFFFFF]  text-[#695346]" >
+                                      <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-medium   text-sm lg:text-base">3 Rooms</p>
+                                      </div>
+                                      <div class="flex">
+                                        <img src="assets/images/size.svg" alt="location" class=" size-5 bg-[#FFFFFF] text-[#695346]" >
+                                          <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-medium  text-sm lg:text-base">1,500 sq ft</p>
+                                          </div>
+                                        </div>
+                                        <div class="flex md:justify-around gap-28 md:gap-2 md:-ml-8 mt-6 pb-4">
+                                          <div >
+                                            <button class="text-sm/6 font-normal md:font-semibold bg-[#2B1B12] text-[#FFFFFF]  px-5 py-2 rounded-md  whitespace-nowrap ">Sign up</button>
+                                              </div>
+                                              <div >
+                                                  <p class="pl-2 text-[#4F3527] font-[Montserrat] font-semibold text-base lg:text-lg">$8,500,000</p>
+                                                  </div>
+                                                </div>
+                                                 </div> 
+                                                   </div>
+
+                                                   <div class=" px-2">
+                                             <img src="assets/images/image 2.png" alt="home-image" class=" rounded-t-xl h-[300px]  w-[400px] sm:w-[550px]  md:h-[200px] md:w-[300px] lg:h-[300px] lg:w-[365px]"/>
+                                                    <div class="bg-[#DDC7BB] pt-4 pl-6 w-[400px] sm:w-[550px] md:w-[100%] xl:w-[98%] rounded-b-xl">
+                                                     <div class="flex items-center justify-start ">
+                                                      <img src="assets/images/location.svg" alt="location" class=" size-5  text-[#695346]" >
+                                                        <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-semibold text-xl  md:text-sm lg:text-lg ml-2"> Palo Alto, California</p>
+                                                        </div>
+                                                        <div class="flex justify-start gap-24 md:gap-4 lg:gap-16 mt-4">
+                                                        <div class="flex">
+                                                          <img src="assets/images/rooms.svg" alt="location" class=" size-5 bg-[#FFFFFF]  text-[#695346]" >
+                                                            <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-medium  text-sm lg:text-base"> 4 Rooms</p>
+                                                            </div>
+                                                            <div class="flex">
+                                                              <img src="assets/images/size.svg" alt="location" class=" size-5 bg-[#FFFFFF] text-[#695346]" >
+                                                                <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-medium text-sm lg:text-base">4,500 sq ft</p>
+                                                                </div>
+                                                              </div>
+                                                              <div class="flex md:justify-around gap-28 md:gap-2 md:-ml-8 mt-6 pb-4">
+                                                                <div >
+                                                                  <button class="text-sm/6 font-normal md:font-semibold bg-[#2B1B12] text-[#FFFFFF]  px-5 py-2 rounded-md  whitespace-nowrap ">Sign up</button>
+                                                                    </div>
+                                                                    <div >
+                                                                        <p class="pl-2 text-[#4F3527] font-[Montserrat] font-semibold text-base lg:text-lg">$3,700,000</P>
+                                                                        </div>
+                                                                      </div>
+                                                                       </div> 
+                                                                         </div> 
+      </div>
+    </div>
+    </div>
+
+    <div class="bg-[#FEF7F2]">
+    <div class="container mx-auto max-w-7xl px-6 mt-32">
+      <h5 class="font-[Montserrat] font-extrabold text-2xl sm:text-3xl text-[#2B1B12] text-center pt-12">
+        What People Say About Dwello
+      </h5>
+  
+      <!-- Swiper container -->
+      <div class="swiper mySwiper mt-24">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide flex justify-center">
+            <div>
+              <img src="assets/images/image (27).png" alt="home-image"
+              class="rounded-t-xl h-[200px] sm:h-[200px] w-[400px] sm:w-[450px] md:h-[200px] md:w-[300px] lg:h-[170px] lg:w-[355px]" />
+              <div class="bg-[#DDC7BB] pt-6 pb-6 pl-6 w-[400px] sm:w-[450px] md:w-[300px] lg:w-[355px] rounded-b-xl">
+                <div class="flex justify-start gap-1">
+                  <img src="assets/images/image (35) 1.svg" alt="image1" class="rounded-full">
+                  <div>
+                    <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-semibold text-xl md:text-sm lg:text-lg ml-2">
+                      Sarah Nguyen
+                    </p>
+                    <div class="flex justify-between gap-24 sm:gap-36 md:gap-8 lg:gap-20 mt-2">
+                      <p class="pl-4 text-[#2B1B12] font-[Montserrat] font-semibold text-sm">
+                        San Francisco
+                      </p>
+                      <div class="flex justify-start bg-[#FFFFFF] gap-1 px-2 rounded-md">
+                        <img src="assets/images/Star 1.svg" alt="star">
+                        <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-medium  text-sm lg:text-base">5.0</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-4 font-[Montserrat] font-medium text-sm px-3">
+                  Dwello truly cares about their clients. They listened to my needs and helped me find the perfect home in the Bay Area.
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Slide 2 -->
+          <div class="swiper-slide flex justify-center">
+            <div>
+              <img src="assets/images/image (24).png" alt="home-image"
+              class="rounded-t-xl h-[200px] sm:h-[200px] w-[400px] sm:w-[450px] md:h-[200px] md:w-[300px] lg:h-[170px] lg:w-[355px]" />
+              <div class="bg-[#DDC7BB] pt-6 pb-6 pl-6 w-[400px] sm:w-[450px] md:w-[300px] lg:w-[355px] rounded-b-xl">
+                <div class="flex justify-start gap-1">
+                  <img src="assets/images/image (39) 1.svg" alt="image1" class="rounded-full">
+                  <div>
+                    <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-semibold text-xl md:text-sm lg:text-lg ml-2">
+                      Alex Johnson
+                    </p>
+                    <div class="flex justify-between gap-24 sm:gap-36 md:gap-8 lg:gap-20 mt-2">
+                      <p class="pl-4 text-[#2B1B12] font-[Montserrat] font-semibold text-sm">
+                        Los Angeles
+                      </p>
+                      <div class="flex justify-start bg-[#FFFFFF]  gap-1 px-2 rounded-md ">
+                        <img src="assets/images/Star 1.svg" alt="star">
+                        <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-medium  text-sm lg:text-base">5.0</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-4 font-[Montserrat] font-medium text-sm xl: px-3">
+                  Dwello truly cares about their clients. They listened to my needs and helped me find the perfect home in the Bay Area.
+                </p>
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Slide 3 -->
+          <div class="swiper-slide flex justify-center">
+            <div>
+              <img src="assets/images/image (24).png" alt="home-image"
+              class="rounded-t-xl h-[200px] sm:h-[200px] w-[400px] sm:w-[450px] md:h-[200px] md:w-[300px] lg:h-[170px] lg:w-[355px]" />
+              <div class="bg-[#DDC7BB] pt-6 pb-6 pl-6 w-[400px] sm:w-[450px] md:w-[300px] lg:w-[355px] rounded-b-xl">
+                <div class="flex justify-start gap-1">
+                  <img src="assets/images/image (31) 1.svg" alt="image1" class="rounded-full">
+                  <div>
+                    <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-semibold text-xl md:text-sm lg:text-lg ml-2">
+                      Maria Lopez
+                    </p>
+                    <div class="flex justify-between gap-24 sm:gap-36 md:gap-8 lg:gap-20 mt-2">
+                      <p class="pl-4 text-[#2B1B12] font-[Montserrat] font-semibold text-sm">
+                        New York
+                      </p>
+                      <div class="flex justify-start bg-[#FFFFFF] gap-1 px-2 rounded-md">
+                        <img src="assets/images/Star 1.svg" alt="star">
+                        <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-medium  text-sm lg:text-base">5.0</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-4 font-[Montserrat] font-medium text-sm px-3">
+                  Dwello truly cares about their clients. They listened to my needs and helped me find the perfect home in the Bay Area.
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Slide 4 -->
+          <div class="swiper-slide flex justify-center">
+            <div>
+              <img src="assets/images/image (24).png" alt="home-image"
+              class="rounded-t-xl h-[180px] sm:h-[200px] w-[400px] sm:w-[450px] md:h-[200px] md:w-[300px] lg:h-[170px] lg:w-[355px]" />
+              <div class="bg-[#DDC7BB] pt-6 pb-6 pl-6 w-[400px] sm:w-[450px] md:w-[300px] lg:w-[355px] rounded-b-xl">
+                <div class="flex justify-start gap-1">
+                  <img src="assets/images/image (35) 1.svg" alt="image1" class="rounded-full">
+                  <div>
+                    <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-semibold text-xl md:text-sm lg:text-lg ml-2">
+                      Ahmed Ali
+                    </p>
+                    <div class="flex justify-between gap-24 sm:gap-36 md:gap-8 lg:gap-20 mt-2">
+                      <p class="pl-4 text-[#2B1B12] font-[Montserrat] font-semibold text-sm">
+                        Dubai
+                      </p>
+                      <div class="flex justify-start bg-[#FFFFFF] gap-1 px-2 rounded-md">
+                        <img src="assets/images/Star 1.svg" alt="star">
+                        <p class="pl-2 text-[#2B1B12] font-[Montserrat] font-medium  text-sm lg:text-base">5.0</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-4 font-[Montserrat] font-medium text-sm px-3">
+                  Dwello truly cares about their clients. They listened to my needs and helped me find the perfect home in the Bay Area.
+                </p>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+      <!-- الأسهم -->
+      <div class="flex justify-center gap-12 mt-12 pb-12">
+        <div class="swiper-button-prev bg-[#2B1B12] rounded-full px-5 py-4 cursor-pointer text-[#FFFFFF] !static !m-0 !w-auto !h-auto">
+      
+        </div>
+        <div class="swiper-button-next !static !m-0 !w-auto !h-auto bg-[#2B1B12] rounded-full text-[#FFFFFF] px-5 py-4 cursor-pointer">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+     <div class="container mx-auto max-w-7xl px-6 mt-32">
+                 <h3 class="font-[Montserrat] font-extrabold text-xl md:text-3xl text-[#2B1B12]  text-center leading-7">Do You Have Any Questions?
+                 <br >
+  
+                  Get Help From Us</h3>
+                  <div class="flex-cols-1 ml-24  sm:flex justify-center sm:ml-0  sm:gap-16 mt-8">
+                    <div class="flex justify-start gap-2">
+                      <img src="assets/images/icons8-verified-account-96 1.svg">
+                      <p class=" font-[Montserrat] font-semibold text-[#543E32] text-xs md:text-sm">Chat live with our support team</p>
+                    </div>
+                    <div class="flex justify-start gap-2">
+                      <img src="assets/images/icons8-verified-account-96 1.svg">
+                      <p class=" font-[Montserrat] font-semibold text-[#543E32] text-xs md:text-sm">Browse our FAQ</p>
+                    </div>
+                  </div>
+                  <div class="flex-cols-1 ml-24  sm:ml-0  sm:flex justify-center  sm:gap-12 mt-12">
+                    <div class="relative ">
+                      <img src="assets/images/email.svg" alt="location" class="absolute left-3 top-1/2 size-5 -translate-y-1/2 text-[#695346]" >
+                      <input 
+                        type="text" 
+                        placeholder="Enter your email address..." 
+                        class="w-[70%] sm:w-full rounded-md border-none  py-2 md:py-3 pl-10 pr-4 sm:pr-24 bg-[#DDC7BB] text-sm md:text-base placeholder-[#543E32] font-normal xl:font-semibold focus:outline-none focus:ring-1 focus:ring-[#695346]"
+                      />
+                  </div>
+                  <button class="text-sm/6 font-normal mt-4 sm:mt-0 md:font-semibold text-sm md:text-base bg-[#2B1B12] text-[#FFFFFF] px-24 sm:px-7 py-2 rounded-md  whitespace-nowrap ">Submit </button>
+                  </div>
+              </div>
+  </main>
+<footer class="bg-[#DDC7BB]">
+  
+    <div class="container mx-auto max-w-7xl px-6 mt-32 pb-36">
+<div class="grid  md:grid-cols-2 lg:grid-cols-5 md:gap-8 lg:gap-16  pt-16">
+<div class="  md:col-span-2 lggit init :col-span-1"> 
+  <img src="assets/images/logo.svg" alt="logo" class="h-7 w-auto ">
+  <p class="mt-4 font-[Montserrat] text-[#4F3527]  font-semibold text-base mt-6">Bringing you closer to your dream home, one click at a time.</p>
+</div>
+<div class="grid gap-4 mt-8 md:mt-0">
+  <h5 class="text-[#2B1B12] font-bold text-xl"> About</h5>
+  <p class="text-[#4F3527] text-base font-bold">Our Story</p>
+  <p class="text-[#4F3527] text-base font-bold">Careers</P>
+    <p class="text-[#4F3527] text-base font-bold">Our Team</p>
+    <p class="text-[#4F3527] text-base font-bold">Resources</p>
+</div>
+<div class="grid gap-4 mt-8 md:mt-0">
+  <h5 class="text-[#2B1B12] font-bold text-xl">  Support</h5>
+  <p class="text-[#4F3527] text-base font-bold">FAQ</p>
+  <p class="text-[#4F3527] text-base font-bold">Contact Us</P>
+    <p class="text-[#4F3527] text-base font-bold">Help Center</p>
+    <p class="text-[#4F3527] text-base font-bold">Terms of Service</p>
+</div>
+<div class="grid gap-4 mt-8 md:mt-0">
+  <h5 class="text-[#2B1B12] font-bold text-xl"> Find Us</h5>
+  <p class="text-[#4F3527] text-base font-bold">Events</p>
+  <p class="text-[#4F3527] text-base font-bold">Locations</P>
+    <p class="text-[#4F3527] text-base font-bold">Newsletter</p>
+</div>
+<div class="grid gap-4 mt-8 md:mt-0">
+  <h5 class="text-[#2B1B12] font-bold text-xl">Our Social</h5>
+<div class="flex gap-4">
+<img src="assets/images/instagram.svg" alt="instagram" class="w-6 h-6">
+<p class="text-[#4F3527] text-base font-bold">Instagram</P>
+</div>
+<div class="flex  gap-4">
+  <img src="assets/images/facebook.svg" alt="facebook" class="w-6 h-6">
+  <p class="text-[#4F3527] text-base font-bold">Facebook</P>
+  </div>
+  <div class="flex  gap-4">
+    <img src="assets/images/x.svg" alt="x" class="w-6 h-6">
+    <p class="text-[#4F3527] text-base font-bold">Twitter (x)</P>
+    </div>
+</div>
+</div>
+    </div>
+
+  
+</footer>
+  </body>
+
+ 
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    slidesPerView: 3,     
+    slidesPerGroup: 1,   
+    spaceBetween: 24,     
+    centeredSlides: false,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },        // الموبايل
+  640: { slidesPerView: 1 },      // sm
+  768: { slidesPerView: 2 },      // md
+  1024: { slidesPerView: 3 }, 
+    },
+  });
+</script>
+</html>
